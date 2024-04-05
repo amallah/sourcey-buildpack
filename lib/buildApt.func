@@ -1,3 +1,0 @@
-function buildApt () {   
-   apt-get install $1 |& progressor "Installing package $URL"
-}
