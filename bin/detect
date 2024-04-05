@@ -1,4 +1,5 @@
 #!/bin/sh
+echo "detect"
 BUILD_DIR=$1
 
 # figure out if we are looking at a Sourcy compatible app

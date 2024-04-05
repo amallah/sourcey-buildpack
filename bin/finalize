@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "finalize"
 
 # any failure in a pipe is a problem
 set -o pipefail

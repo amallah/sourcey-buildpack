@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "release"
 
 BUILD_DIR=$1
 

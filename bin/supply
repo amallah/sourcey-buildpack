@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo "supply"
 # any failure in a pipe is a problem
 set -o pipefail
 ## do not tolerate unset variables
