@@ -106,7 +106,7 @@ at version 5.10.1 which is about 100 years out of date.  This is was what got
 me to write this in the first place.
 
 ```sh
-buildPerl 5.20.2
+buildPerl 5.24.3
 ```
 
 #### `buildPerlModule [any cpanm option]`

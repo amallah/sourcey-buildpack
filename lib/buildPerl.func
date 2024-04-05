@@ -13,8 +13,8 @@ function buildPerl () {
         -Dprefix=$PREFIX \
         -Dperlpath="$PREFIX/bin/perl" \
         -Dstartperl="#!$PREFIX/bin/perl" \
-        -Dusethreads -de |& progressor "Configuring Perl $PERL_VER" 2263
-   make |& progressor "Building Perl $PERL_VER" 3277
-   make install |& progressor "Installing Perl $PERL_VER" 2808
+        -Dusethreads -de |& progressor "Configuring Perl $PERL_VER" 1938
+   make |& progressor "Building Perl $PERL_VER" 2717
+   make install |& progressor "Installing Perl $PERL_VER" 425
    cd $WORK_DIR
 }
