@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# any failure in a pipe is a problem
+set -o pipefail
+## do not tolerate unset variables
+set -o nounset
+# don't try to remember where things are
+set +o hashall
+
+set -o errtrace
+
+## show the environment we are building in
+SOURCEY=sourcey
+BUILD_DIR=$1
+
+WORK_DIR=$HOME/tmp/$SOURCEY.$$
+
+chmod 755 $BUILD_DIR/SourceyStart.sh
+
+cd $HOME
+rm -rf $WORK_DIR

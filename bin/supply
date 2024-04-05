@@ -62,8 +62,3 @@ if [ -r $BUILD_DIR/SourceyBuildApp.sh ]; then
    cd $WORK_DIR
    source $BUILD_DIR/SourceyBuildApp.sh
 fi
-
-chmod 755 $BUILD_DIR/SourceyStart.sh
-
-cd $HOME
-rm -rf $WORK_DIR

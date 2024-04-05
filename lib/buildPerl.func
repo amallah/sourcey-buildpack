@@ -3,7 +3,7 @@
 function buildPerl () {
    cd $WORK_DIR
    PERL_VER=$1
-   wget http://www.cpan.org/src/5.0/perl-${PERL_VER}.tar.gz -q -O - | tar --gzip -xvf - |& progressor "Downloading Perl $PERL_VER" 1000
+   wget http://www.cpan.org/src/5.0/perl-${PERL_VER}.tar.gz -q -O - | tar --gzip -xvf - |& progressor "Downloading Perl $PERL_VER" 500
    cd perl-${PERL_VER}
    ./Configure \
         -de \
@@ -13,7 +13,7 @@ function buildPerl () {
         -Dprefix=$PREFIX \
         -Dperlpath="$PREFIX/bin/perl" \
         -Dstartperl="#!$PREFIX/bin/perl" \
-        -Dusethreads -de |& progressor "Configuring Perl $PERL_VER" 2516
+        -Dusethreads -de |& progressor "Configuring Perl $PERL_VER" 2539
    make |& progressor "Building Perl $PERL_VER" 2717
    make install |& progressor "Installing Perl $PERL_VER" 425
    cd $WORK_DIR
