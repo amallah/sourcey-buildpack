@@ -10,7 +10,6 @@ set +o hashall
 set -o errtrace
 
 ## show the environment we are building in
-SOURCEY=sourcey
 BUILD_DIR=$1
 CACHE_DIR=$2
 DEPS_DIR=$3
@@ -19,9 +18,9 @@ DEPS_IDX=$4
 APP_DIR=$(basename $BUILD_DIR)
 PREFIX=$HOME/$APP_DIR/$SOURCEY
 START_DIR=`pwd`
-export BUILDPACK_DIR=`dirname $(readlink -f ${BASH_SOURCE%/*})`
+BUILDPACK_DIR=$(dirname `dirname $0`)
 
-WORK_DIR=$HOME/tmp/$SOURCEY.$$
+WORK_DIR="${DEPS_DIR}/${DEPS_IDX}"
 mkdir -p $WORK_DIR
 
 source $BUILDPACK_DIR/lib/SourceyBuildLib.inc
