@@ -1,4 +1,4 @@
-function buildPerlModule () {
+function buildPerlModuleLoud () {
    cd $WORK_DIR
    if [ ! -x cpanm ]; then
         wget --no-check-certificate -O cpanm cpanmin.us |& progressor "Downloading cpanminus"
