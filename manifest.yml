@@ -1,0 +1,17 @@
+---
+dependencies: []
+include_files:
+- LICENSE
+- README.md
+- VERSION
+- bin/detect
+- bin/finalize
+- bin/release
+- bin/supply
+- manifest.yml
+- lib/buildAuto.func
+- lib/buildPerl.func
+- lib/buildPerlModule.func
+- lib/buildPerlModuleLoud.func
+- lib/SourceyBuildLib.inc
+
