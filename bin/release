@@ -7,7 +7,7 @@ SOURCEY=sourcey
 # It was just added to create a semblance of heroku compatibility
 P5L=''
 if [ ! -f $BUILD_DIR/$SOURCEY/bin/perl ]; then
-   P5L=" PERL5LIB='$HOME/app/${SOURCEY}/lib/perl5'"
+   P5L=" PERL5LIB='$HOME/app/${SOURCEY}/lib/perl5:$HOME/deps/0/lib/perl5/5.26' LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/deps/0/lib "
 fi
 
 cat <<YAML

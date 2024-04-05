@@ -23,9 +23,9 @@ if [ -f $SB ]; then
    # only do this if you change something fundamental in the compile
    # system
    MD5SUM=`md5sum $SB|awk '{print $1}'`.R2
-#   if egrep -qv '^SOURCEY_REBUILD=1' $SB && test -f "$CACHE_DIR/$SOURCEY/$MD5SUM"; then
-#      cp --verbose --archive $CACHE_DIR/$SOURCEY $BUILD_DIR |& progressor "Restoring binaries from $CACHE_DIR"
-#   else
+   if egrep -qv '^SOURCEY_REBUILD=1' $SB && test -f "$CACHE_DIR/$SOURCEY/$MD5SUM"; then
+      cp --verbose --archive $CACHE_DIR/$SOURCEY $BUILD_DIR |& progressor "Restoring binaries from $CACHE_DIR"
+   else
       cd $WORK_DIR
 
       echo "       Environment"
@@ -45,7 +45,7 @@ if [ -f $SB ]; then
           cp --verbose --archive $BUILD_DIR/$SOURCEY $CACHE_DIR  |& progressor "Saveing a copy of your binaries to $CACHE_DIR for future use"
           touch $CACHE_DIR/$SOURCEY/$MD5SUM
       fi
-#   fi
+   fi
 fi
 
 if [ -r $BUILD_DIR/SourceyBuildApp.sh ]; then
